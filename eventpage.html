@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_right_alt,bookmark" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+    <title>MALLORCA SAILING</title>
+</head>
+<body>
+    <section class="navbar">
+    <div class="navcontent">
+        <div class="logo"><i>MALLORCA SAILING</i></div>
+
+<!-- AI GENERATED CODE: ADDING A BURGER MENU FOR MOBILE DEVICES- this section displays the burger icon by styling span to look like lines in css -->
+
+<button class="burger-menu" id="burgerBtn">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+
+<!-- END OF AI GENERATED CODE -->
+
+        <nav class="defaultlink navbaroptions">
+         <ul>
+           <li><a href="index.html"><h6>HOME</h6></a></li>
+           <li><a href="events.html"><h6>EVENTS</h6></a></li>
+           <li><a href="learn.html"><h6>LEARN</h6></a></li>
+           <li><a href="forum.html"><h6>FORUM</h6></a></li>
+         </ul>
+        </nav>
+    </div>
+
+<!-- AI GENERATED CODE: ADDING A BURGER MENU FOR MOBILE DEVICES- this section displays the nav options -->
+<nav class="defaultlink mobile-menu" id="mobileMenu">
+    <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="events.html">EVENTS</a></li>
+        <li><a href="learn.html">LEARN</a></li>
+        <li><a href="forum.html">FORUM</a></li>
+    </ul>
+</nav>
+<!-- END OF AI GENERATED CODE -->
+
+</section>
+
+
+<!-- SECTION FOR THE BACK BUTTON (TAKES BACK TO EVENTS PAGE) -->
+    <section class="secondarylink backbuttonarea"> 
+            <a href="events.html">← Back</a>
+    </section>
+
+  <!-- TITLE/ HERO SECTION -->  
+    <section class="learnintro"> 
+    <div class="eventherosection"> 
+        <div class="eventherotext">
+            <h2>55th Trofeo S.A.R Princesa Sofía</h2>
+            <p><b>MARCH 27 – APRIL 4</b></p>
+            <p><b>BAY OF PALMA</b></p>
+        </div>
+    </div>
+    </section>
+
+<!-- INFORMATION ABOUT THE EVENT -->
+    <section class="eventcontent">
+        <div class="eventcontentflex1">
+            <div class="whatisit">
+                <h4>What is it?</h4>
+                <p>The Trofeo Princesa Sofía S.A.R. (S.A.R. = Su Alteza Real / Her Royal Highness) is a prestigious, international sailing regatta held every year in the Bay of Palma since 1968. With various dinghy and windsurfing classes, this Olympic-level event attracts hundreds of top competitive sailors worldwide.</p>
+                <p>It is Princess Sofía of Spain herself, after whom the event is named, who often presents the awards, emphasising the event’s importance across the world.</p>
+                <p>This year, for its 55th anniversary, 1,200 sailors from 62 nations will compete in all ten Olympic classes.</p>
+            </div>
+            <div class="eventcontentimage">
+                <img src="images/SAR.jpg" alt="Trofeo S.A.R Princesa Sofía race in the bay of palma">
+                <p class="credit">Image credit: © SAILING ENERGY</p>
+            </div>
+        </div>  
+
+        <div class="eventcontentflex2">
+            <div class="eventdetails">
+                <h4>What to expect.</h4>
+                <p>To make finals more exciting for the 2028 Olympics, the Trofeo Princesa Sofía S.A.R. will be testing new changes proposed by World Sailing.</p>
+                <p>With not one but two final races to determine the podium across all classes except for Formula Kite and iQFOiL, these new changes will increase the chances of medal stage competitors to win a medal.</p>
+                <p>The event is based at Mallorca’s key yacht clubs around the Bay of Palma:</p>
+                <ul>
+                    <li><p>Real Club Náutico de Palma (RCNP)</p></li>
+                    <li><p>Club Nàutic S’Arenal (CNA)</p></li>
+                    <li><p>Club Marítimo San Antonio de la Playa (CMSAP)</p></li>
+                    <li><p>Federación Balear de Vela (Balearic Sailing Federation – FBV)</p></li>
+                </ul>
+            </div>
+
+            <div class="Do I need tickets?">
+                <h4>Do I need tickets?</h4>
+                <p>You can see the events for free along the beaches and promenades around the Bay of Palma. There are also the key yacht clubs that host their own events for the competitions that you can freely attend to.</p>
+                <p>Live tracking and results are available at <a href="https://www.trofeoprincesasofia.org">trofeoprincesasofia.org</a> or you can <a href="https://play.google.com/store/apps/details?id=com.bogo.sofiaapp47&hl=es">download</a> the official event app for real-time updates too!</p>
+            </div>
+        </div>  
+
+        <!-- MAP AND CURRENT WEATHER APIS -->
+        <div class="mapandcurrentweather">
+        <h4>Location and Current Weather</h4>
+    <div class="flexrow">
+            <div id="map"></div>
+            <div class="weather-card">
+                <h6>Weather conditions</h6>
+                <div id="current-weather-header">
+                    <p>Loading time...</p>
+                </div>
+            <div id="current-weather-info">
+            <p>Loading weather data...</p>
+            </div>
+            <div class="credit">Weather data provided by <a href="https://open-meteo.com/">OpenMeteo</a></div>
+        </div>
+    </div>
+    </div> 
+    </section>
+    
+      <div class="divider"></div>
+<!-- OTHER UPCOMING EVENTS CARDS -->
+    <section class="otherupcomingevents">
+        <h4>Other upcoming events:</h4>
+
+        <div class="eventcardlayout">
+
+            <div class="eventcard">
+                <div class="eventcardcontent">
+                    <div class="eventtitle">
+                        <h3>21 PalmaVela</h3>
+                    </div>
+                    <div class="detailsandsaveoption">
+                        <div class="details">
+                            <h6>23 APRIL– 03 MAY</h6>
+                            <h6>BAY OF PALMA</h6>
+                        </div>
+                        <div class="secondarylink saveoption">
+                            <i class="material-symbols-outlined">bookmark</i><a href="events.html">Save Event</a>
+                        </div>
+                    </div>
+                    <div class="eventimage">
+                        <img src="images/PMVL.png" alt="PalmaVela event in the bay of palma">
+                        <p class="credit">Image credit: © SAILING ENERGY</p>
+                    </div>
+                    <div class="eventdescription">
+                        <p>The Sandberg PalmaVela, organised by the Real Club Náutico de Palma in Mallorca, will feature the event in two main parts: <br>
+La Larga (Offshore Race): April 23–27, 2026.</br>
+Multiclass Regatta: April 29 – May 3, 2026.</p>
+                    </div>
+                    <div class="secondarylink learnmore">
+                        <a href="events.html">Learn more</a> <i class="material-symbols-outlined">arrow_right_alt</i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="eventcard">
+                <div class="eventcardcontent">
+                    <div class="eventtitle">
+                        <h3>52 Super Series Sailing Week</h3>
+                    </div>
+                    <div class="detailsandsaveoption">
+                        <div class="details">
+                            <h6>04 MAY – 09 MAY</h6>
+                            <h6>BAY OF PALMA</h6>
+                        </div>
+                        <div class="secondarylink saveoption">
+                            <i class="material-symbols-outlined">bookmark</i><a href="events.html">Save Event</a>
+                        </div>
+                    </div>
+                    <div class="eventimage">
+                        <img src="images/CLASSIC.jpg" alt="Super Series Sailing Week in the bay of palma">
+                        <p class="credit">Image credit: © SAILING ENERGY</p>
+                    </div>
+                    <div class="eventdescription">
+                        <p>Europe’s oldest and longest-running superyacht regatta will be celebrating it 30th anniversary this year and will continue to feature competitive sailing and social events!</p>
+                    </div>
+                    <div class="secondarylink learnmore">
+                        <a href="events.html">Learn more</a> <i class="material-symbols-outlined">arrow_right_alt</i>
+                    </div>
+                </div>
+            </div>
+
+            <button class="loadmorecard"><h3>LOAD MORE</h3><i class="largearrow material-symbols-outlined">arrow_right_alt</i></button>
+
+    </section>
+
+    <footer>
+        <div class="footercontent">
+            <div class="footerrowitems">
+                <div class="logo"><i>MALLORCA SAILING</i></div>
+                <nav class="defaultlink footernavoptions">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="events.html">EVENTS</a></li>
+                        <li><a href="learn.html">LEARN</a></li>
+                        <li><a href="forum.html">FORUM</a></li>
+                        
+                    </ul>
+                </nav>
+            </div>
+            <div class="copyright">
+                <p>Manchester Metropolitan University Student Project- Louis Charnley 2026</p>
+            </div>
+        </div>
+    </footer>
+
+
+<!-- JAVASCRIPT FOR OPENSTREETMAP API (LEAFLET) -->
+    <script>
+        var map = L.map('map').setView([39.5696, 2.6502], 13);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+   }).addTo(map);
+    </script>
+
+
+<!-- JAVASCRIPT FOR WEATHER API -->
+    <script>
+    async function get_weather() {
+  const url = "https://api.open-meteo.com/v1/forecast?latitude=39.5694&longitude=2.6502&current=temperature_2m,is_day,precipitation,wind_gusts_10m,wind_direction_10m,wind_speed_10m&forecast_days=1&wind_speed_unit=kn";
+
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+
+    
+    const temp = data.current.temperature_2m;
+    const wind = data.current.wind_speed_10m;
+    const windDirection = data.current.wind_direction_10m;
+    const precipitation = data.current.precipitation;
+    const windGusts = data.current.wind_gusts_10m;
+
+    document.getElementById('current-weather-header').innerHTML = `<p>Right Now (${new Date().toLocaleTimeString()}):</p>`;
+
+
+    document.getElementById('current-weather-info').innerHTML = `
+      <div class="data-point"><span>Temp:</span> <strong>${temp}°C</strong></div>
+      <div class="data-point"><span>Wind:</span> <strong>${wind} kn</strong></div>
+      <div class="data-point"><span>Wind Direction:</span> <strong>${windDirection}°</strong></div>
+      <div class="data-point"><span>Precipitation:</span> <strong>${precipitation} mm</strong></div>
+      <div class="data-point"><span>Wind Gusts:</span> <strong>${windGusts} kn</strong></div>
+    `;
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    document.getElementById('current-weather-info').innerText = "Failed to load weather.";
+  }
+}
+
+get_weather();
+</script>
+
+<!-- JAVASCRIPT FOR BURGER MENU -->
+<script>
+    document.getElementById('burgerBtn').addEventListener('click', function() {
+        document.getElementById('mobileMenu').classList.toggle('active');
+    });
+    
+    // Optional: Close menu when a link is clicked
+    document.querySelectorAll('.mobile-menu a').forEach(link => {
+        link.addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.remove('active');
+        });
+    });
+    
+</script>
+
+</body>
+</html>
